@@ -46,10 +46,6 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    // Route::get('/welcome', [PageController::class, 'welcome'])->name('home');
-    // route::get('/autos', [PageController::class, 'ShowAutos'])->name('autos');
-    // Route::get('/ofertas', [PageController::class, 'ShowOfertas'])->name('ofertas');
-    // Route::get('/contact', [PageController::class, 'ShowContact'])->name('contacto');
     Route::get('/profile', [UserControlador::class, 'profile']);
     Route::resource('/client', ClienteController::class)->names('cliente');
     Route::resource('/roles', RoleController::class)->names('roles');
